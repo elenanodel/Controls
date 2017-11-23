@@ -6,29 +6,19 @@ using System.Threading.Tasks;
 
 namespace Control_OOP
 {
-    class TextFiles : Files
+    class TextFiles : FilesBase
     {
         private string _Content;
 
         public string Content
         {
             get { return _Content; }
-            set { value = _Content; }
         }
 
-        public string FileName()
+        
+        public override string ToString()
         {
-            return Name = "file.txt";
+            return $"{Name} Extension: {Extension} Size: {Size} Content: {Content}";
         }
-
-        public string FileExtension()
-        {
-            return Extension = ".txt";
-        }
-
-        public string FileSize()
-        {
-            return Size = "6B";
-        }        
     }
 }

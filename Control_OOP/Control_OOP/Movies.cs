@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Control_OOP
 {
-    class Movies : Files
+    class Movies : FilesBase
     {
         private string _Resolution;
         private string _Length;
@@ -21,6 +21,9 @@ namespace Control_OOP
             get { return _Length; }
         }
 
-
+        public override string ToString()
+        {
+            return $"{Name} Extension: {Extension} Size: {Size} Resolution: {Resolution} Length: {Length}";
+        }
     }
 }

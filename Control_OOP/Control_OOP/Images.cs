@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Control_OOP
 {
-    class Images : Files
+    class Images : FilesBase
     {
         private string _Resolution;
 
@@ -15,6 +15,9 @@ namespace Control_OOP
             get { return _Resolution; }
         }
 
-
+        public override string ToString()
+        {
+            return $"{Name} Extension: {Extension} Size: {Size} Resolution: {Resolution}";
+        }
     }
 }
