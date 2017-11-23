@@ -21,9 +21,15 @@ namespace Control_OOP
             get { return _Length; }
         }
 
+        public Movies(string name, string extension, string size, string resolution, string length) : base(name, extension, size)
+        {
+            _Resolution = resolution;
+            _Length = length;
+        }
+
         public override string ToString()
         {
-            return $"{Name} Extension: {Extension} Size: {Size} Resolution: {Resolution} Length: {Length}";
+            return $"\n\t{Name} \n\t\tExtension: {Extension} \n\t\tSize: {Size} \n\t\tResolution: {Resolution} \n\t\tLength: {Length}";
         }
     }
 }

@@ -15,9 +15,14 @@ namespace Control_OOP
             get { return _Resolution; }
         }
 
+        public Images(string name, string extension, string size, string resolution) : base(name, extension, size)
+        {
+            _Resolution = resolution;            
+        }
+
         public override string ToString()
         {
-            return $"{Name} Extension: {Extension} Size: {Size} Resolution: {Resolution}";
+            return $"\n\t{Name}\n\t\t Extension: {Extension}\n\t\t Size: {Size}\n\t\t Resolution: {Resolution}";
         }
     }
 }

@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Control_OOP
 {
-    abstract class FilesBase
+    class FilesBase
     {
-        private string _Name;
-        private string _Extension;
-        private string _Size;
+        protected string _Name;
+        protected string _Extension;
+        protected string _Size;
 
         public string Name
         {
-            get { return _Name; } 
+            get { return _Name; }
         }
 
         public string Extension
@@ -25,7 +25,14 @@ namespace Control_OOP
         public string Size
         {
             get { return _Size; }
-        }       
+        }
+
+        public FilesBase(string name, string extension, string size)
+        {
+            _Name = name;
+            _Extension = extension;
+            _Size = size;    
+        }
 
         public string Split()
         {

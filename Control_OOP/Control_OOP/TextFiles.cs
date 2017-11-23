@@ -15,10 +15,15 @@ namespace Control_OOP
             get { return _Content; }
         }
 
+        public TextFiles(string name, string extension, string size, string content): base(name, extension, size)
+        {
+            _Content = content;
+        }
+
         
         public override string ToString()
         {
-            return $"{Name} Extension: {Extension} Size: {Size} Content: {Content}";
+            return $"\n\t{Name} \n\t\tExtension: {Extension} \n\t\tSize: {Size} \n\t\tContent: {Content}";
         }
     }
 }
